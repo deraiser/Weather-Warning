@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/box.xsd">
+    <import>
+        <box identifier="info.daries.weatherWarning.germany">
+            <name language="de">Wetterwarnungen DWD (Deutschland)</name>
+            <name language="en">Weather warnings DWD (Deutschland)</name>
+            <boxType>system</boxType>
+            <position>sidebarRight</position>
+            <objectType>info.daries.weatherWarning.germany</objectType>
+            <showHeader>1</showHeader>
+            <visibleEverywhere>0</visibleEverywhere>
+            <visibilityExceptions>
+                <page>com.woltlab.wcf.Dashboard</page>
+            </visibilityExceptions>
+            <content language="de">
+                <title>Wetterwarnungen DWD</title>
+            </content>
+            <content language="en">
+                <title>Weather warnings DWD</title>
+            </content>
+        </box>
+        <box identifier="info.daries.weatherWarning.region">
+            <name language="de">Wetterwarnungen DWD (Region)</name>
+            <name language="en">Weather warnings DWD (Region)</name>
+            <boxType>system</boxType>
+            <position>sidebarRight</position>
+            <objectType>info.daries.weatherWarning.region</objectType>
+            <visibleEverywhere>0</visibleEverywhere>
+            <cssClassName>weatherWarningRegionBox</cssClassName>
+            <visibilityExceptions>
+                <page>com.woltlab.wcf.Dashboard</page>
+            </visibilityExceptions>
+        </box>
+    </import>
+</data>
