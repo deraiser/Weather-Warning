@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/userOption.xsd">
+    <import>
+        <categories>
+            <category name="settings.general.weatherWarning">
+                <parent>settings.general</parent>
+            </category>
+        </categories>
+        <options>
+            <option name="weatherWarningRegionEnable">
+                <categoryname>settings.general.weatherWarning</categoryname>
+                <optiontype>boolean</optiontype>
+                <defaultvalue>1</defaultvalue>
+                <options>module_weather_warning</options>
+                <editable>3</editable>
+            </option>
+
+            <option name="weatherWarningRegion">
+                <categoryname>profile.personal</categoryname>
+                <optiontype>weatherWarningRegion</optiontype>
+                <options>module_weather_warning</options>
+                <visible>3</visible>
+                <editable>3</editable>
+                <showorder>5</showorder>
+            </option>
+        </options>
+    </import>
+</data>
