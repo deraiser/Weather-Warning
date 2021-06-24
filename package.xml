@@ -2,11 +2,11 @@
 <package name="info.daries.weatherWarning" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/package.xsd">
     <packageinformation>
         <packagename><![CDATA[Weather warning from the DWD]]></packagename>
-        <packagename language="de"><![CDATA[Wetterwarnung vom DWD]]></packagename>
+        <packagename language="de"><![CDATA[Wetterwarnungen vom DWD]]></packagename>
         <packagedescription><![CDATA[Displays current weather warnings for Germany and your region.]]></packagedescription>
         <packagedescription language="de"><![CDATA[Zeigt die aktuellen Unwetterwarnungen für Deutschland und deiner Region an.]]></packagedescription>
-        <version>1.0.0</version>
-        <date>2020-08-27</date>
+        <version>1.0.1</version>
+        <date>2021-06-24</date>
     </packageinformation>
 	
     <authorinformation>
@@ -19,7 +19,7 @@
     </requiredpackages>
     
     <excludedpackages>
-        <excludedpackage version="5.3.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+        <excludedpackage version="5.4.0 Alpha 1">com.woltlab.wcf</excludedpackage>
         <excludedpackage version="*">de.lrde.weatherWarning</excludedpackage>
     </excludedpackages>
 	
@@ -38,6 +38,11 @@
         <instruction type="eventListener" />
         <instruction type="templateListener" />
         
+        <instruction type="language" />
+    </instructions>
+	
+    <instructions type="update" fromversion="1.0.0">
+        <instruction type="file" />
         <instruction type="language" />
     </instructions>
 </package>
