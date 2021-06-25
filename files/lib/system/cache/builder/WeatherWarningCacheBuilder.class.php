@@ -11,7 +11,7 @@ use wcf\util\JSON;
  * 
  * @author	Marco Daries, Alexander Langer (Source of ideas)
  * @copyright	2020 Daries.info
- * @license	Licence Deraiser Free <https://my-wsc.de/license-deraiser-free>
+ * @license	Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
  * @package	WoltLabSuite\Core\System\Cache\Builder
  */
 class WeatherWarningCacheBuilder extends AbstractCacheBuilder {
