@@ -10,7 +10,8 @@
         <item name="wcf.acp.option.module_weather_warning"><![CDATA[Weather warnings]]></item>
         <item name="wcf.acp.option.weather_warning_default_region"><![CDATA[Region]]></item>
         <item name="wcf.acp.option.weather_warning_default_region.description"><![CDATA[Enter a standard region here. This region is used if the user has not entered anything in their profile.]]></item>
-        <item name="wcf.acp.option.weather_warning_enable_ForestFireHazardIndexWBI"><![CDATA[Show Forest Fire Hazard Index WBI]]></item>
+        <item name="wcf.acp.option.weather_warning_enable_forestFireHazardIndexWBI"><![CDATA[Show Forest Fire Hazard Index WBI]]></item>
+        <item name="wcf.acp.option.weather_warning_enable_grasslandFireIndex"><![CDATA[Show Grassland - Fire Index]]></item>
     </category>
     
     <category name="wcf.user.option">
@@ -27,6 +28,7 @@
         <item name="wcf.weatherWarning.empty.region"><![CDATA[If you fill in the "Region" field in your {if $__wcf->getUserProfileHandler()->canEditOwnProfile()}<a href="{link controller='User' object=$__wcf->user}editOnInit=true#about{/link}">profile</a>{else}profile{/if}, you will receive regional warnings from the DWD here.]]></item>
         <item name="wcf.weatherWarning.end"><![CDATA[End]]></item>
         <item name="wcf.weatherWarning.forestFireHazardIndex"><![CDATA[Forest Fire Hazard Index WBI]]></item>
+        <item name="wcf.weatherWarning.grasslandFireIndex"><![CDATA[Grassland - Fire Index]]></item>
         <item name="wcf.weatherWarning.more.information"><![CDATA[More information]]></item>
         <item name="wcf.weatherWarning.notice"><![CDATA[For your region ({$__wcf->getUserWeatherWarningHandler()->getRegion()}) there is a weather warning from the DWD!]]></item>
         <item name="wcf.weatherWarning.region.info"><![CDATA[Info]]></item>

@@ -3,7 +3,7 @@
     <import>
         <box identifier="info.daries.weatherWarning.forestFireHazardIndexWBI">
             <name language="de">Waldbrand-Gefahrenindex WBI (Deutschland)</name>
-            <name language="en">Waldbrand-Gefahrenindex WBI (Deutschland)</name>
+            <name language="en">Forest Fire Hazard Index WBI (Germany)</name>
             <boxType>system</boxType>
             <position>sidebarRight</position>
             <objectType>info.daries.weatherWarning.forestFireHazardIndexWBI</objectType>
@@ -16,12 +16,12 @@
                 <title>Waldbrand-Gefahrenindex WBI</title>
             </content>
             <content language="en">
-                <title>Show Forest Fire Hazard Index WBI</title>
+                <title>Forest Fire Hazard Index WBI</title>
             </content>
         </box>
         <box identifier="info.daries.weatherWarning.germany">
             <name language="de">Wetterwarnungen DWD (Deutschland)</name>
-            <name language="en">Weather warnings DWD (Deutschland)</name>
+            <name language="en">Weather warnings DWD (Germany)</name>
             <boxType>system</boxType>
             <position>sidebarRight</position>
             <objectType>info.daries.weatherWarning.germany</objectType>
@@ -35,6 +35,24 @@
             </content>
             <content language="en">
                 <title>Weather warnings DWD</title>
+            </content>
+        </box>
+        <box identifier="info.daries.weatherWarning.grasslandFireIndex">
+            <name language="de">Grasland - Feuerindex (Deutschland)</name>
+            <name language="en">Grassland - Fire Index (Germany)</name>
+            <boxType>system</boxType>
+            <position>sidebarRight</position>
+            <objectType>info.daries.weatherWarning.grasslandFireIndex</objectType>
+            <showHeader>1</showHeader>
+            <visibleEverywhere>0</visibleEverywhere>
+            <visibilityExceptions>
+                <page>com.woltlab.wcf.Dashboard</page>
+            </visibilityExceptions>
+            <content language="de">
+                <title>Grasland - Feuerindex</title>
+            </content>
+            <content language="en">
+                <title>Grassland - Fire Index</title>
             </content>
         </box>
         <box identifier="info.daries.weatherWarning.region">

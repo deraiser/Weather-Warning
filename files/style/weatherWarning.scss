@@ -87,10 +87,12 @@
 }
 
 .weatherWarningForestFireHazardIndexMap,
+.weatherWarningGrasslandFireIndexMap,
 .weatherWarningMap {
     text-align:  center;
 
     .forestFireHazardIndexMap,
+    .grasslandFireIndexMap,
     .germanyMap,
     .germanyMapInfo {
         max-width: 100%;

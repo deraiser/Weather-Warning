@@ -18,6 +18,7 @@ class WeatherWarningCacheBuilder extends AbstractCacheBuilder
 {
 
     const GERMANY_FORESTFIREHAZARDINDEXWBI_URL = 'https://www.dwd.de/DWD/warnungen/agrar/wbx/wbx_stationen.png';
+    const GERMANY_GRASSLANDFIREINDEX_URL = 'https://www.dwd.de/DWD/warnungen/agrar/glfi/glfi_stationen.png';
     const GERMANY_REGION_URL = 'https://www.dwd.de/DWD/warnungen/warnapp/json/warnings.json';
     const GERMANY_MAP_URL = 'https://www.dwd.de/DWD/warnungen/warnapp_gemeinden/json/warnungen_gemeinde_map_de.png';
 
@@ -34,6 +35,7 @@ class WeatherWarningCacheBuilder extends AbstractCacheBuilder
         $data = [
             'forestFireHazardIndexWBI' => '',
             'germanyMap' => '',
+            'grasslandFireIndex' => '',
             'warnings' => []
         ];
 
@@ -45,6 +47,19 @@ class WeatherWarningCacheBuilder extends AbstractCacheBuilder
                 $reply = $request->getReply();
 
                 $data['forestFireHazardIndexWBI'] = "data:image/png;base64," . base64_encode($reply['body']);
+            } catch (SystemException $e) {
+                
+            }
+        }
+
+        if (WEATHER_WARNING_ENABLE_GRASSLANDFIREINDEX) {
+            // load germany grassland fire index map
+            try {
+                $request = new HTTPRequest(self::GERMANY_GRASSLANDFIREINDEX_URL);
+                $request->execute();
+                $reply = $request->getReply();
+
+                $data['grasslandFireIndex'] = "data:image/png;base64," . base64_encode($reply['body']);
             } catch (SystemException $e) {
                 
             }

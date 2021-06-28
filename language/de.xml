@@ -10,7 +10,8 @@
         <item name="wcf.acp.option.module_weather_warning"><![CDATA[Wetterwarnung]]></item>
         <item name="wcf.acp.option.weather_warning_default_region"><![CDATA[Region]]></item>
         <item name="wcf.acp.option.weather_warning_default_region.description"><![CDATA[Gebe hier einen Standard Region an. Diese Region wird genommen, wenn der Benutzer keine Angabe in seinem Profil vorgenommen hat.]]></item>
-        <item name="wcf.acp.option.weather_warning_enable_ForestFireHazardIndexWBI"><![CDATA[Waldbrand-Gefahrenindex WBI anzeigen]]></item>
+        <item name="wcf.acp.option.weather_warning_enable_forestFireHazardIndexWBI"><![CDATA[Waldbrand-Gefahrenindex WBI anzeigen]]></item>
+        <item name="wcf.acp.option.weather_warning_enable_grasslandFireIndex"><![CDATA[Grasland - Feuerindex anzeigen]]></item>
     </category>
     
     <category name="wcf.user.option">
@@ -27,6 +28,7 @@
         <item name="wcf.weatherWarning.empty.region"><![CDATA[Wenn {if LANGUAGE_USE_INFORMAL_VARIANT}Du in deinem{else}Sie in Ihrem{/if} {if $__wcf->getUserProfileHandler()->canEditOwnProfile()}<a href="{link controller='User' object=$__wcf->user}editOnInit=true#about{/link}">Profil</a>{else}Profil{/if} das Feld "Region" {if LANGUAGE_USE_INFORMAL_VARIANT}ausfüllst{else}ausfüllen{/if}, so {if LANGUAGE_USE_INFORMAL_VARIANT}erhältst Du{else}erhalten Sie{/if} hier regionale Warnmeldungen vom DWD.]]></item>
         <item name="wcf.weatherWarning.end"><![CDATA[Ende]]></item>
         <item name="wcf.weatherWarning.forestFireHazardIndex"><![CDATA[Waldbrand-Gefahrenindex WBI]]></item>
+        <item name="wcf.weatherWarning.grasslandFireIndex"><![CDATA[Grasland - Feuerindex]]></item>
         <item name="wcf.weatherWarning.more.information"><![CDATA[Mehr Informationen]]></item>
         <item name="wcf.weatherWarning.notice"><![CDATA[Für Ihre Region ({$__wcf->getUserWeatherWarningHandler()->getRegion()}) liegt eine Wetterwarnung vom DWD vor!]]></item>
         <item name="wcf.weatherWarning.region.info"><![CDATA[Info]]></item>

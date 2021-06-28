@@ -19,7 +19,12 @@
                 <categoryname>user.weatherWarning</categoryname>
                 <optiontype>weatherWarningRegion</optiontype>
             </option>
-            <option name="weather_warning_enable_ForestFireHazardIndexWBI">
+            <option name="weather_warning_enable_forestFireHazardIndexWBI">
+                <categoryname>user.weatherWarning</categoryname>
+                <optiontype>boolean</optiontype>
+                <defaultvalue>0</defaultvalue>
+            </option>
+            <option name="weather_warning_enable_grasslandFireIndex">
                 <categoryname>user.weatherWarning</categoryname>
                 <optiontype>boolean</optiontype>
                 <defaultvalue>0</defaultvalue>

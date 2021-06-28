@@ -13,6 +13,11 @@
             <classname>wcf\system\box\WeatherWarningGermanyBoxController</classname>
         </type>
         <type>
+            <name>info.daries.weatherWarning.grasslandFireIndex</name>
+            <definitionname>com.woltlab.wcf.boxController</definitionname>
+            <classname>wcf\system\box\WeatherWarningGrasslandFireIndexGermanyBoxController</classname>
+        </type>
+        <type>
             <name>info.daries.weatherWarning.region</name>
             <definitionname>com.woltlab.wcf.boxController</definitionname>
             <classname>wcf\system\box\WeatherWarningRegionBoxController</classname>
