@@ -26,6 +26,7 @@
         <item name="wcf.weatherWarning.empty"><![CDATA[Aktuell liegt für die Region ({$region}) keine Warnungen vor.]]></item>
         <item name="wcf.weatherWarning.empty.region"><![CDATA[Wenn {if LANGUAGE_USE_INFORMAL_VARIANT}Du in deinem{else}Sie in Ihrem{/if} {if $__wcf->getUserProfileHandler()->canEditOwnProfile()}<a href="{link controller='User' object=$__wcf->user}editOnInit=true#about{/link}">Profil</a>{else}Profil{/if} das Feld "Region" {if LANGUAGE_USE_INFORMAL_VARIANT}ausfüllst{else}ausfüllen{/if}, so {if LANGUAGE_USE_INFORMAL_VARIANT}erhältst Du{else}erhalten Sie{/if} hier regionale Warnmeldungen vom DWD.]]></item>
         <item name="wcf.weatherWarning.end"><![CDATA[Ende]]></item>
+        <item name="wcf.weatherWarning.forestFireHazardIndex"><![CDATA[Waldbrand-Gefahrenindex WBI]]></item>
         <item name="wcf.weatherWarning.more.information"><![CDATA[Mehr Informationen]]></item>
         <item name="wcf.weatherWarning.notice"><![CDATA[Für Ihre Region ({$__wcf->getUserWeatherWarningHandler()->getRegion()}) liegt eine Wetterwarnung vom DWD vor!]]></item>
         <item name="wcf.weatherWarning.region.info"><![CDATA[Info]]></item>

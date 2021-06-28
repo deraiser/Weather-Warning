@@ -9,13 +9,15 @@ use wcf\util\JSON;
 /**
  * Caches weather warning data from DWD
  * 
- * @author	Marco Daries, Alexander Langer (Source of ideas)
- * @copyright	2020 Daries.info
- * @license	Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
- * @package	WoltLabSuite\Core\System\Cache\Builder
+ * @author      Marco Daries, Alexander Langer (Source of ideas)
+ * @copyright   2020 Daries.info
+ * @license     Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
+ * @package     WoltLabSuite\Core\System\Cache\Builder
  */
-class WeatherWarningCacheBuilder extends AbstractCacheBuilder {
+class WeatherWarningCacheBuilder extends AbstractCacheBuilder
+{
 
+    const GERMANY_FORESTFIREHAZARDINDEXWBI_URL = 'https://www.dwd.de/DWD/warnungen/agrar/wbx/wbx_stationen.png';
     const GERMANY_REGION_URL = 'https://www.dwd.de/DWD/warnungen/warnapp/json/warnings.json';
     const GERMANY_MAP_URL = 'https://www.dwd.de/DWD/warnungen/warnapp_gemeinden/json/warnungen_gemeinde_map_de.png';
 
@@ -27,11 +29,26 @@ class WeatherWarningCacheBuilder extends AbstractCacheBuilder {
     /**
      * @inheritDoc
      */
-    protected function rebuild(array $parameters) {
+    protected function rebuild(array $parameters)
+    {
         $data = [
+            'forestFireHazardIndexWBI' => '',
             'germanyMap' => '',
             'warnings' => []
         ];
+
+        if (WEATHER_WARNING_ENABLE_FORESTFIREHAZARDINDEXWBI) {
+            // load germany forest fire hazard index WBI map
+            try {
+                $request = new HTTPRequest(self::GERMANY_FORESTFIREHAZARDINDEXWBI_URL);
+                $request->execute();
+                $reply = $request->getReply();
+
+                $data['forestFireHazardIndexWBI'] = "data:image/png;base64," . base64_encode($reply['body']);
+            } catch (SystemException $e) {
+                
+            }
+        }
 
         // load germany map
         try {
@@ -69,7 +86,8 @@ class WeatherWarningCacheBuilder extends AbstractCacheBuilder {
      * @param   array   $warnings
      * @return  array
      */
-    protected function readWarnings($warnings) {
+    protected function readWarnings($warnings)
+    {
         $list = [];
         if (empty($warnings)) return $list;
 
@@ -114,7 +132,8 @@ class WeatherWarningCacheBuilder extends AbstractCacheBuilder {
      * 
      * @param   array   $warnings
      */
-    protected function sortWarnings(&$warnings) {
+    protected function sortWarnings(&$warnings)
+    {
         foreach ($warnings as $regionName => $warningDatas) {
             $end = array_column($warningDatas, 'end');
             $level = array_column($warningDatas, 'level');
@@ -130,7 +149,8 @@ class WeatherWarningCacheBuilder extends AbstractCacheBuilder {
      * @param   string    $value
      * @return  string
      */
-    protected function umlautsConvert($value) {
+    protected function umlautsConvert($value)
+    {
         $value = strtolower($value);
 
         $search = array(" ", "ä", "Ä", "ö", "Ö", "ü", "Ü", "ß");
