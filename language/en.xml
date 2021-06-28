@@ -23,7 +23,7 @@
         <item name="wcf.weatherWarning.dwd"><![CDATA[Weather warnings DWD]]></item>
         <item name="wcf.weatherWarning.dwd.region"><![CDATA[Weather warnings DWD<br />({if $region|empty}Region{else}{$region}{/if}){if !$region|empty && $__wcf->user->getUserOption('weatherWarningRegion')|empty} <a href="#" class="jsTooltip weatherWarningInfo{@$box->boxID} jsStaticDialog" data-dialog-id="weatherWarningRegionDialog{@$box->boxID}" title="Info"><span class="icon icon16 fa-info-circle red"></span></a>{/if}]]></item>
         <item name="wcf.weatherWarning.empty"><![CDATA[There are currently no warnings for the region ({$region}).]]></item>
-        <item name="wcf.weatherWarning.empty.region"><![CDATA[If you fill in the "Region" field in your profile, you will receive regional warnings from the DWD here.]]></item>
+        <item name="wcf.weatherWarning.empty.region"><![CDATA[If you fill in the "Region" field in your {if $__wcf->getUserProfileHandler()->canEditOwnProfile()}<a href="{link controller='User' object=$__wcf->user}editOnInit=true#about{/link}">profile</a>{else}profile{/if}, you will receive regional warnings from the DWD here.]]></item>
         <item name="wcf.weatherWarning.end"><![CDATA[End]]></item>
         <item name="wcf.weatherWarning.more.information"><![CDATA[More information]]></item>
         <item name="wcf.weatherWarning.notice"><![CDATA[For your region ({$__wcf->getUserWeatherWarningHandler()->getRegion()}) there is a weather warning from the DWD!]]></item>
