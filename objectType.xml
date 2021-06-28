@@ -3,6 +3,11 @@
     <import>
         <!-- box controllers -->
         <type>
+            <name>info.daries.weatherWarning.forestFireHazardIndexWBI</name>
+            <definitionname>com.woltlab.wcf.boxController</definitionname>
+            <classname>wcf\system\box\WeatherWarningForestFireHazardIndexGermanyBoxController</classname>
+        </type>
+        <type>
             <name>info.daries.weatherWarning.germany</name>
             <definitionname>com.woltlab.wcf.boxController</definitionname>
             <classname>wcf\system\box\WeatherWarningGermanyBoxController</classname>

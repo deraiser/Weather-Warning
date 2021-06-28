@@ -8,10 +8,10 @@ use wcf\system\WCF;
 /**
  * Box that shows the german warning weather map.
  * 
- * @author	Marco Daries, Alexander Langer (Source of ideas)
- * @copyright	2020 Daries.info
- * @license	Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
- * @package	WoltLabSuite\Core\System\Box
+ * @author      Marco Daries, Alexander Langer (Source of ideas)
+ * @copyright   2020 Daries.info
+ * @license     Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
+ * @package     WoltLabSuite\Core\System\Box
  */
 class WeatherWarningGermanyBoxController extends AbstractBoxController {
 

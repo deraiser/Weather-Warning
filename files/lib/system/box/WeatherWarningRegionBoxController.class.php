@@ -8,12 +8,13 @@ use wcf\system\weather\warning\UserWeatherWarningHandler;
 /**
  * Box that shows the region warning weather information.
  * 
- * @author	Marco Daries, Alexander Langer (Source of ideas)
- * @copyright	2020 Daries.info
- * @license	Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
- * @package	WoltLabSuite\Core\System\Box
+ * @author      Marco Daries, Alexander Langer (Source of ideas)
+ * @copyright   2020 Daries.info
+ * @license     Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
+ * @package     WoltLabSuite\Core\System\Box
  */
-class WeatherWarningRegionBoxController extends AbstractBoxController {
+class WeatherWarningRegionBoxController extends AbstractBoxController
+{
 
     /**
      * @inheritDoc
@@ -23,23 +24,24 @@ class WeatherWarningRegionBoxController extends AbstractBoxController {
     /**
      * @inheritDoc
      */
-    protected function loadContent() {
+    protected function loadContent()
+    {
         if (MODULE_WEATHER_WARNING) {
             if (!WCF::getUser()->userID && empty(UserWeatherWarningHandler::getInstance()->getRegion())) return;
-            
+
             if (WCF::getUser()->userID) {
                 $regionEnable = WCF::getUser()->getUserOption('weatherWarningRegionEnable');
                 if (!$regionEnable) return;
             }
 
             $this->content = WCF::getTPL()->fetch(
-                    'boxWeatherWarningRegion',
-                    'wcf',
-                    [
-                        'region' => UserWeatherWarningHandler::getInstance()->getRegion(),
-                        'warnings' => UserWeatherWarningHandler::getInstance()->getWarnings()
-                    ],
-                    true
+                'boxWeatherWarningRegion',
+                'wcf',
+                [
+                    'region' => UserWeatherWarningHandler::getInstance()->getRegion(),
+                    'warnings' => UserWeatherWarningHandler::getInstance()->getWarnings()
+                ],
+                true
             );
         }
     }

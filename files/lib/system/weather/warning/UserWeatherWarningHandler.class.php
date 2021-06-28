@@ -8,12 +8,13 @@ use wcf\system\SingletonFactory;
 use wcf\system\WCF;
 
 /**
- * @author	Marco Daries, Alexander Langer (Source of ideas)
- * @copyright	2020 Daries.info
- * @license	Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
- * @package	WoltLabSuite\Core\System\Weather\Warning
+ * @author      Marco Daries, Alexander Langer (Source of ideas)
+ * @copyright   2020 Daries.info
+ * @license     Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
+ * @package     WoltLabSuite\Core\System\Weather\Warning
  */
-class UserWeatherWarningHandler extends SingletonFactory {
+class UserWeatherWarningHandler extends SingletonFactory
+{
 
     /**
      * region
@@ -32,7 +33,8 @@ class UserWeatherWarningHandler extends SingletonFactory {
      *
      * @return  string
      */
-    public function getRegion() {
+    public function getRegion()
+    {
         return $this->region;
     }
 
@@ -41,7 +43,8 @@ class UserWeatherWarningHandler extends SingletonFactory {
      *
      * @return  array
      */
-    public function getWarnings() {
+    public function getWarnings()
+    {
         if (isset($this->warnings[$this->getRegion()])) return $this->warnings[$this->getRegion()];
         return [];
     }
@@ -51,14 +54,16 @@ class UserWeatherWarningHandler extends SingletonFactory {
      *
      * @return  boolean
      */
-    public function hasWarnings() {
+    public function hasWarnings()
+    {
         return !empty($this->getWarnings());
     }
 
     /**
      * @inheritDoc
      */
-    protected function init() {
+    protected function init()
+    {
         if (MODULE_WEATHER_WARNING) {
             $this->warnings = WeatherWarningCacheBuilder::getInstance()->getData([], 'warnings');
 
@@ -81,7 +86,8 @@ class UserWeatherWarningHandler extends SingletonFactory {
      * 
      * @param   string  $region
      */
-    public function setRegion($region) {
+    public function setRegion($region)
+    {
         $this->region = $region;
     }
 

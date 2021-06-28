@@ -9,16 +9,17 @@ use wcf\system\exception\UserInputException;
 /**
  * Executes region related actions.
  * 
- * @author	Marco Daries, Alexander Langer (Source of ideas)
- * @copyright	2020 Daries.info
- * @license	Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
- * @package	WoltLabSuite\Core\Data\Weather\Warning\Region
+ * @author      Marco Daries, Alexander Langer (Source of ideas)
+ * @copyright   2020 Daries.info
+ * @license     Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
+ * @package     WoltLabSuite\Core\Data\Weather\Warning\Region
  * 
- * @method  WeatherWarningRegion            create()
- * @method  WeatherWarningRegionEditor[]    getObjects()
- * @method  WeatherWarningRegionEditor      getSingleObject()
+ * @method      WeatherWarningRegion            create()
+ * @method      WeatherWarningRegionEditor[]    getObjects()
+ * @method      WeatherWarningRegionEditor      getSingleObject()
  */
-class WeatherWarningRegionAction extends AbstractDatabaseObjectAction implements ISearchAction {
+class WeatherWarningRegionAction extends AbstractDatabaseObjectAction implements ISearchAction
+{
 
     /**
      * @inheritDoc
@@ -28,7 +29,8 @@ class WeatherWarningRegionAction extends AbstractDatabaseObjectAction implements
     /**
      * @inheritDoc
      */
-    public function getSearchResultList() {
+    public function getSearchResultList()
+    {
         $searchString = $this->parameters['data']['searchString'];
         $excludedSearchValues = [];
         if (isset($this->parameters['data']['excludedSearchValues'])) {
@@ -57,7 +59,8 @@ class WeatherWarningRegionAction extends AbstractDatabaseObjectAction implements
     /**
      * @inheritDoc
      */
-    public function validateGetSearchResultList() {
+    public function validateGetSearchResultList()
+    {
         $this->readString('searchString', false, 'data');
 
         if (isset($this->parameters['data']['excludedSearchValues']) && !is_array($this->parameters['data']['excludedSearchValues'])) {

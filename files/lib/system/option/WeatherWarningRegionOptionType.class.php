@@ -10,17 +10,19 @@ use wcf\system\WCF;
 /**
  * Option type implementation for region input fields.
  * 
- * @author	Marco Daries, Alexander Langer (Source of ideas)
- * @copyright	2020 Daries.info
- * @license	Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
- * @package	WoltLabSuite\Core\System\Option
+ * @author      Marco Daries, Alexander Langer (Source of ideas)
+ * @copyright   2020 Daries.info
+ * @license     Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
+ * @package     WoltLabSuite\Core\System\Option
  */
-class WeatherWarningRegionOptionType extends TextOptionType {
+class WeatherWarningRegionOptionType extends TextOptionType
+{
 
     /**
      * @inheritDoc
      */
-    public function getFormElement(Option $option, $value) {
+    public function getFormElement(Option $option, $value)
+    {
         WCF::getTPL()->assign([
             'option' => $option,
             'inputType' => $this->inputType,
@@ -33,7 +35,8 @@ class WeatherWarningRegionOptionType extends TextOptionType {
     /**
      * @inheritDoc
      */
-    public function validate(Option $option, $newValue) {
+    public function validate(Option $option, $newValue)
+    {
         if (!empty($newValue)) {
             $regionList = new WeatherWarningRegionList();
             $regionList->getConditionBuilder()->add('regionName = ?', [$newValue]);

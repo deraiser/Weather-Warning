@@ -10,6 +10,7 @@
         <item name="wcf.acp.option.module_weather_warning"><![CDATA[Wetterwarnung]]></item>
         <item name="wcf.acp.option.weather_warning_default_region"><![CDATA[Region]]></item>
         <item name="wcf.acp.option.weather_warning_default_region.description"><![CDATA[Gebe hier einen Standard Region an. Diese Region wird genommen, wenn der Benutzer keine Angabe in seinem Profil vorgenommen hat.]]></item>
+        <item name="wcf.acp.option.weather_warning_enable_ForestFireHazardIndexWBI"><![CDATA[Waldbrand-Gefahrenindex WBI anzeigen]]></item>
     </category>
     
     <category name="wcf.user.option">
