@@ -27,12 +27,8 @@ class WeatherWarningRegionBoxController extends AbstractBoxController
     protected function loadContent()
     {
         if (MODULE_WEATHER_WARNING) {
+            if (WCF::getUser()->userID && !WCF::getUser()->getUserOption('weatherWarningRegionEnable')) return;
             if (!WCF::getUser()->userID && empty(UserWeatherWarningHandler::getInstance()->getRegion())) return;
-
-            if (WCF::getUser()->userID) {
-                $regionEnable = WCF::getUser()->getUserOption('weatherWarningRegionEnable');
-                if (!$regionEnable) return;
-            }
 
             $this->content = WCF::getTPL()->fetch(
                 'boxWeatherWarningRegion',
