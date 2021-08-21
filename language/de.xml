@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/2019/language.xsd" languagecode="de" languagename="Deutsch" countrycode="de">
     <category name="wcf.acp.box">
+        <item name="wcf.acp.box.boxController.info.daries.weatherWarning.forestFireHazardIndexWBI"><![CDATA[Wetterwarnungen DWD (Waldbrand-Gefahrenindex WBI)]]></item>
         <item name="wcf.acp.box.boxController.info.daries.weatherWarning.germany"><![CDATA[Wetterwarnungen DWD (Deutschland)]]></item>
+        <item name="wcf.acp.box.boxController.info.daries.weatherWarning.grasslandFireIndex"><![CDATA[Wetterwarnungen DWD (Grasland - Feuerindex)]]></item>
         <item name="wcf.acp.box.boxController.info.daries.weatherWarning.region"><![CDATA[Wetterwarnungen DWD (Region)]]></item>
     </category>
     
