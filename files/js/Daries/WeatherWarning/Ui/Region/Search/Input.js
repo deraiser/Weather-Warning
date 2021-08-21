@@ -4,28 +4,20 @@
  * @license     Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
  * @module      Daries/WeatherWarning/Ui/Region/Search/Input
  */
-define(['Core', 'WoltLabSuite/Core/Ui/Search/Input'], function (Core, UiSearchInput) {
+define(["require", "exports", "tslib", "WoltLabSuite/Core/Core", "WoltLabSuite/Core/Ui/Search/Input"], function (require, exports, tslib_1, Core, Input_1) {
     "use strict";
-
-    /**
-     * @param       {Element}       element     input element
-     * @param       {Object=}       options     search options and settings
-     * @constructor
-     */
-    function UiWeatherWarningRegionSearchInput(element, options) {
-        this.init(element, options);
-    }
-    Core.inherit(UiWeatherWarningRegionSearchInput, UiSearchInput, {
-        init: function (element, options) {
+    Core = tslib_1.__importStar(Core);
+    Input_1 = tslib_1.__importDefault(Input_1);
+    class UiWeatherWarningRegionSearchInput extends Input_1.default {
+        constructor(element, options) {
             options = Core.extend({
                 ajax: {
-                    className: 'wcf\\data\\weather\\warning\\region\\WeatherWarningRegionAction'
+                    className: "wcf\\data\\weather\\warning\\region\\WeatherWarningRegionAction"
                 }
             }, options);
-
-            UiWeatherWarningRegionSearchInput._super.prototype.init.call(this, element, options);
+            super(element, options);
         }
-    });
-
+    }
+    Core.enableLegacyInheritance(UiWeatherWarningRegionSearchInput);
     return UiWeatherWarningRegionSearchInput;
 });
