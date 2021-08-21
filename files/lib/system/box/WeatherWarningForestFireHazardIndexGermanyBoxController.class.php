@@ -27,6 +27,8 @@ class WeatherWarningForestFireHazardIndexGermanyBoxController extends AbstractBo
     protected function loadContent()
     {
         if (MODULE_WEATHER_WARNING && WEATHER_WARNING_ENABLE_FORESTFIREHAZARDINDEXWBI) {
+            if (WCF::getUser()->userID && !WCF::getUser()->getUserOption('weatherWarningForestFireHazardIndexGermanyEnable')) return;
+
             $data = [
                 'forestFireHazardIndexMap' => WeatherWarningCacheBuilder::getInstance()->getData([], 'forestFireHazardIndexWBI')
             ];

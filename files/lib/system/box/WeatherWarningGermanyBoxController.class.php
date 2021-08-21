@@ -13,7 +13,8 @@ use wcf\system\WCF;
  * @license     Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
  * @package     WoltLabSuite\Core\System\Box
  */
-class WeatherWarningGermanyBoxController extends AbstractBoxController {
+class WeatherWarningGermanyBoxController extends AbstractBoxController
+{
 
     /**
      * @inheritDoc
@@ -23,8 +24,11 @@ class WeatherWarningGermanyBoxController extends AbstractBoxController {
     /**
      * @inheritDoc
      */
-    protected function loadContent() {
+    protected function loadContent()
+    {
         if (MODULE_WEATHER_WARNING) {
+            if (WCF::getUser()->userID && !WCF::getUser()->getUserOption('weatherWarningGermanyEnable')) return;
+
             $data = [
                 'germanyMap' => WeatherWarningCacheBuilder::getInstance()->getData([], 'germanyMap'),
                 'germanyMapInfo' => WCF::getPath() . 'images/weather/germanyMapInfo.png'

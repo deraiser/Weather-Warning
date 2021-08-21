@@ -17,6 +17,9 @@
     <category name="wcf.user.option">
         <item name="wcf.user.option.category.settings.general.weatherWarning"><![CDATA[Weather warnings DWD]]></item>
         <item name="wcf.user.option.error.noExist"><![CDATA[Please enter a valid region.]]></item>
+        <item name="wcf.user.option.weatherWarningForestFireHazardIndexGermanyEnable"><![CDATA[View Forest Fire Hazard Index WBI]]></item>
+        <item name="wcf.user.option.weatherWarningGermanyEnable"><![CDATA[View germany weather warnings]]></item>
+        <item name="wcf.user.option.weatherWarningGrasslandFireIndexGermanyEnable"><![CDATA[View Grassland - Fire Index]]></item>
         <item name="wcf.user.option.weatherWarningRegion"><![CDATA[Region]]></item>
         <item name="wcf.user.option.weatherWarningRegionEnable"><![CDATA[View regional weather warnings]]></item>
     </category>
