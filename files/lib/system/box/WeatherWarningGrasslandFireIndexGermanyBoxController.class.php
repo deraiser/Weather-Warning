@@ -19,11 +19,6 @@ class WeatherWarningGrasslandFireIndexGermanyBoxController extends AbstractBoxCo
     /**
      * @inheritDoc
      */
-    protected static $supportedPositions = ['sidebarLeft', 'sidebarRight'];
-
-    /**
-     * @inheritDoc
-     */
     protected function loadContent()
     {
         if (MODULE_WEATHER_WARNING && WEATHER_WARNING_ENABLE_GRASSLANDFIREINDEX) {
