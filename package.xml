@@ -43,5 +43,7 @@
 	
     <instructions type="update" fromversion="1.1.0">
         <instruction type="file" />
+        <instruction type="userOption" />
+        <instruction type="language" />
     </instructions>
 </package>
