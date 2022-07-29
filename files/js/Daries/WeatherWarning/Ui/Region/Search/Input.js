@@ -2,7 +2,7 @@
  * @author      Marco Daries, Alexander Langer (Source of ideas)
  * @copyright   2020-2022 Daries.info
  * @license     Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) <https://creativecommons.org/licenses/by-nd/4.0/>
- * @module      Daries/WeatherWarning/Ui/Region/Search/Input
+ * @package     WoltLabSuite\Core
  */
 define(["require", "exports", "tslib", "WoltLabSuite/Core/Core", "WoltLabSuite/Core/Ui/Search/Input"], function (require, exports, tslib_1, Core, Input_1) {
     "use strict";
@@ -12,8 +12,8 @@ define(["require", "exports", "tslib", "WoltLabSuite/Core/Core", "WoltLabSuite/C
         constructor(element, options) {
             options = Core.extend({
                 ajax: {
-                    className: "wcf\\data\\weather\\warning\\region\\WeatherWarningRegionAction"
-                }
+                    className: "wcf\\data\\weather\\warning\\region\\WeatherWarningRegionAction",
+                },
             }, options);
             super(element, options);
         }
