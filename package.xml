@@ -5,8 +5,8 @@
         <packagename language="de"><![CDATA[Wetterwarnungen vom DWD]]></packagename>
         <packagedescription><![CDATA[Displays current weather warnings for Germany and your region.]]></packagedescription>
         <packagedescription language="de"><![CDATA[Zeigt die aktuellen Unwetterwarnungen für Deutschland und deiner Region an.]]></packagedescription>
-        <version>1.1.1</version>
-        <date>2021-08-21</date>
+        <version>1.2.0</version>
+        <date>2022-07-29</date>
     </packageinformation>
 	
     <authorinformation>
@@ -15,11 +15,11 @@
     </authorinformation>
 	
     <requiredpackages>
-        <requiredpackage minversion="5.4.0">com.woltlab.wcf</requiredpackage>
+        <requiredpackage minversion="5.5.0">com.woltlab.wcf</requiredpackage>
     </requiredpackages>
     
     <excludedpackages>
-        <excludedpackage version="5.5.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+        <excludedpackage version="5.6.0 Alpha 1">com.woltlab.wcf</excludedpackage>
         <excludedpackage version="*">de.lrde.weatherWarning</excludedpackage>
     </excludedpackages>
 	
@@ -41,9 +41,7 @@
         <instruction type="language" />
     </instructions>
 	
-    <instructions type="update" fromversion="1.1.0">
+    <instructions type="update" fromversion="1.1.1">
         <instruction type="file" />
-        <instruction type="userOption" />
-        <instruction type="language" />
     </instructions>
 </package>
