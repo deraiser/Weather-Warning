@@ -15,8 +15,6 @@
     "dependencies": {
         "@types/jquery": "^3.5.14",
         "@woltlab/wcf": "https://github.com/WoltLab/WCF.git#5.5",
-        "deepmerge": "^4.2.2",
-        "terser": "^5.14.1",
         "tslib": "^2.4.0"
     }
 }
