@@ -19,11 +19,6 @@ class WeatherWarningGermanyBoxController extends AbstractBoxController
     /**
      * @inheritDoc
      */
-    protected static $supportedPositions = ['sidebarLeft', 'sidebarRight'];
-
-    /**
-     * @inheritDoc
-     */
     protected function loadContent()
     {
         if (MODULE_WEATHER_WARNING) {
@@ -37,5 +32,4 @@ class WeatherWarningGermanyBoxController extends AbstractBoxController
             $this->content = WCF::getTPL()->fetch('boxWeatherWarningGermany', 'wcf', $data, true);
         }
     }
-
 }

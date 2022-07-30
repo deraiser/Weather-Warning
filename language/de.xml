@@ -28,7 +28,7 @@
     
     <category name="wcf.weatherWarning">
         <item name="wcf.weatherWarning.dwd"><![CDATA[Wetterwarnung DWD]]></item>
-        <item name="wcf.weatherWarning.dwd.region"><![CDATA[Wetterwarnungen DWD<br />({if $region|empty}Region{else}{$region}{/if}){if !$region|empty && $__wcf->user->getUserOption('weatherWarningRegion')|empty} <a href="#" class="jsTooltip weatherWarningInfo{@$box->boxID} jsStaticDialog" data-dialog-id="weatherWarningRegionDialog{@$box->boxID}" title="Info"><span class="icon icon16 fa-info-circle red"></span></a>{/if}]]></item>
+        <item name="wcf.weatherWarning.dwd.region"><![CDATA[Wetterwarnungen DWD ({if $region|empty}Region{else}{$region}{/if}){if !$region|empty && $__wcf->user->getUserOption('weatherWarningRegion')|empty} <a href="#" class="jsTooltip weatherWarningInfo{@$box->boxID} jsStaticDialog" data-dialog-id="weatherWarningRegionDialog{@$box->boxID}" title="Info"><span class="icon icon16 fa-info-circle red"></span></a>{/if}]]></item>
         <item name="wcf.weatherWarning.empty"><![CDATA[Aktuell liegt für die Region ({$region}) keine Warnungen vor.]]></item>
         <item name="wcf.weatherWarning.empty.region"><![CDATA[Wenn {if LANGUAGE_USE_INFORMAL_VARIANT}Du in deinem{else}Sie in Ihrem{/if} {if $__wcf->getUserProfileHandler()->canEditOwnProfile()}<a href="{link controller='User' object=$__wcf->user}editOnInit=true#about{/link}">Profil</a>{else}Profil{/if} das Feld "Region" {if LANGUAGE_USE_INFORMAL_VARIANT}ausfüllst{else}ausfüllen{/if}, so {if LANGUAGE_USE_INFORMAL_VARIANT}erhältst Du{else}erhalten Sie{/if} hier regionale Warnmeldungen vom DWD.]]></item>
         <item name="wcf.weatherWarning.end"><![CDATA[Ende]]></item>

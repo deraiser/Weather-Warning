@@ -19,11 +19,6 @@ class WeatherWarningRegionBoxController extends AbstractBoxController
     /**
      * @inheritDoc
      */
-    protected static $supportedPositions = ['sidebarLeft', 'sidebarRight'];
-
-    /**
-     * @inheritDoc
-     */
     protected function loadContent()
     {
         if (MODULE_WEATHER_WARNING) {
@@ -41,5 +36,4 @@ class WeatherWarningRegionBoxController extends AbstractBoxController
             );
         }
     }
-
 }
