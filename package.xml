@@ -5,8 +5,8 @@
         <packagename language="de"><![CDATA[Wetterwarnungen vom DWD]]></packagename>
         <packagedescription><![CDATA[Displays current weather warnings for Germany and your region.]]></packagedescription>
         <packagedescription language="de"><![CDATA[Zeigt die aktuellen Unwetterwarnungen für Deutschland und deiner Region an.]]></packagedescription>
-        <version>1.2.0</version>
-        <date>2022-07-29</date>
+        <version>1.2.1</version>
+        <date>2022-07-30</date>
     </packageinformation>
 	
     <authorinformation>
@@ -41,7 +41,8 @@
         <instruction type="language" />
     </instructions>
 	
-    <instructions type="update" fromversion="1.1.1">
+    <instructions type="update" fromversion="1.2.0">
         <instruction type="file" />
+        <instruction type="language" />
     </instructions>
 </package>
